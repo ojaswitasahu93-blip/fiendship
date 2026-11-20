@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Bestie Forever 💗</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: #fff0f5;
+    color: #80465e;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 15px;
+    background: linear-gradient(145deg,#ffe0eb,#fff0f5,#f8d9ff);
+}
+
+.hero .small {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Pacifico', cursive;
+    color: #f078a5;
+    font-size: clamp(38px,8vw,65px);
+    line-height: 1.4;
+}
+
+.hero p {
+    margin: 18px 0;
+    font-size: 17px;
+    max-width: 500px;
+    line-height: 1.8;
+}
+
+.teddy {
+    font-size: 100px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.btn {
+    border: none;
+    background: #f078a5;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 7px 20px #f078a555;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    background: #e85c91;
+}
+
+section {
+    padding: 75px 18px;
+    text-align: center;
+}
+
+.heading {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(27px,6vw,40px);
+    color: #ed79a5;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+
+.card {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px 25px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px #ed9db522;
+    line-height: 2;
+    font-size: 16px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(145px,1fr));
+    gap: 17px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 6px 20px #d98aa733;
+    transition: .4s;
+}
+
+.gallery img:hover {
+    transform: rotate(-3deg) scale(1.04);
+}
+
+.promises {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+    gap: 18px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.promise {
+    background: white;
+    border-radius: 22px;
+    padding: 25px 15px;
+    box-shadow: 0 8px 20px #ed9db522;
+    transition: .3s;
+}
+
+.promise:hover {
+    transform: translateY(-8px);
+}
+
+.promise span {
+    font-size: 40px;
+}
+
+.promise h3 {
+    color: #ed79a5;
+    margin: 12px 0;
+}
+
+.promise p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.letter {
+    background: #fff;
+    border: 2px dashed #f2a4c0;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 25px;
+    line-height: 2;
+    display: none;
+}
+
+footer {
+    background: #f9dce8;
+    text-align: center;
+    padding: 35px 15px;
+    line-height: 2;
+}
+
+footer h2 {
+    font-family: 'Pacifico', cursive;
+    color: #e66d9b;
+    font-size: 28px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    z-index: 10;
+    animation: fly 5s linear forwards;
+}
+
+@keyframes fly {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+#surprise {
+    display: none;
+    margin: 25px auto 0;
+    max-width: 500px;
+    font-size: 19px;
+    line-height: 2;
+    color: #e66d9b;
+    font-weight: 700;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HOME -->
+<div class="hero">
+    <div class="small">🎀 A LITTLE WEBSITE FOR MY FAVOURITE PERSON 🎀</div>
+
+    <div class="teddy">🧸</div>
+
+    <h1>Hey Bestieee! 💗</h1>
+
+    <p>
+        Some people make life beautiful just by being in it...
+        And you are one of them! 🥹💕
+    </p>
+
+    <button class="btn" onclick="document.getElementById('story').scrollIntoView()">
+        Let's Celebrate Our Friendship 🌷
+    </button>
+</div>
+
+<!-- FRIENDSHIP STORY -->
+<section id="story">
+    <h2 class="heading">Our Little World 💕</h2>
+    <p class="subtitle">A friendship that means everything to me 🥺</p>
+
+    <div class="card">
+        🌸 Dear Bestie,<br><br>
+
+        I don't know how I got so lucky to have
+        someone like you in my life.
+
+        Thank you for all the laughs, silly talks,
+        crazy memories and endless support.
+
+        You make ordinary days special
+        and difficult days easier.
+
+        <br><br>
+        No matter where life takes us,
+        you'll always have a special place in my heart.
+
+        <br><br>
+        LOVE YOU MY CUTIEE! 🧸💗
+    </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section style="background:#ffe7f0;">
+    <h2 class="heading">Our Cute Memories 📸</h2>
+    <p class="subtitle">Every picture has a little story 💗</p>
+
+    <div class="gallery">
+        <img src="photo1.jpg" alt="Memory 1">
+        <img src="photo2.jpg" alt="Memory 2">
+        <img src="photo3.jpg" alt="Memory 3">
+        <img src="photo4.jpg" alt="Memory 4">
+        <img src="photo5.jpg" alt="Memory 5">
+        <img src="photo6.jpg" alt="Memory 6">
+    </div>
+</section>
+
+<!-- PROMISES -->
+<section>
+    <h2 class="heading">My Promises To You 🌷</h2>
+    <p class="subtitle">A few little promises from your bestie 💌</p>
+
+    <div class="promises">
+
+        <div class="promise">
+            <span>🫂</span>
+            <h3>Always There</h3>
+            <p>I'll always try to be there whenever you need me.</p>
+        </div>
+
+        <div class="promise">
+            <span>😂</span>
+            <h3>Endless Laughs</h3>
+            <p>I'll never stop making silly jokes with you.</p>
+        </div>
+
+        <div class="promise">
+            <span>💗</span>
+            <h3>No Judgement</h3>
+            <p>You can always be your weirdest self around me.</p>
+        </div>
+
+        <div class="promise">
+            <span>♾️</span>
+            <h3>Forever Friends</h3>
+            <p>Distance and time won't change our bond.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SECRET LETTER -->
+<section style="background:#ffe7f0;">
+    <h2 class="heading">A Secret For You 🤫</h2>
+    <p class="subtitle">I have something to tell you...</p>
+
+    <div style="font-size:65px;">💌</div>
+
+    <button class="btn" onclick="openLetter()">
+        Open Your Secret Letter 💝
+    </button>
+
+    <div class="letter" id="letter">
+        <h2 style="color:#ed79a5;">Dear Bestieee! 🥹</h2>
+
+        <p>
+            If I could choose my favourite person
+            all over again, I'd still choose YOU!
+
+            <br><br>
+
+            You're not just my friend,
+            you're my happiness, my comfort
+            and my favourite headache! 😂
+
+            <br><br>
+
+            Please never change.
+            Stay crazy, stay cute and stay mine
+            as my best friend forever!
+
+            <br><br>
+            <b>Forever & Always ♾️💗</b>
+        </p>
+    </div>
+</section>
+
+<!-- SURPRISE -->
+<section>
+    <h2 class="heading">One Last Surprise 🎁</h2>
+    <div style="font-size:85px;">🎀🎁</div>
+
+    <button class="btn" onclick="surprise()">
+        Open Your Gift 🥺
+    </button>
+
+    <div id="surprise">
+        🌷 YOU ARE MY FAVOURITE HUMAN! 🌷
+        <br><br>
+        Thank you for existing.
+        <br>
+        Thank you for being YOU.
+        <br><br>
+        BEST FRIENDS FOREVER! 🧸💗♾️
+    </div>
+</section>
+
+<footer>
+    <h2>Made With Lots Of Love 💗</h2>
+    <p>For my favourite bestie in the whole universe 🌎</p>
+    <p>Forever isn't long enough with you! ♾️</p>
+    <p>🧸 💕 🌷</p>
+</footer>
+
+<script>
+function openLetter() {
+    let letter = document.getElementById("letter");
+
+    if (letter.style.display === "block") {
+        letter.style.display = "none";
+    } else {
+        letter.style.display = "block";
+    }
+}
+
+function surprise() {
+    document.getElementById("surprise").style.display = "block";
+
+    for (let i = 0; i < 35; i++) {
+        setTimeout(createHeart, i * 100);
+    }
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+
+    const emojis = ["💗","💕","💖","🌸","✨","🧸"];
+    heart.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (18 + Math.random() * 25) + "px";
+    heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 6000);
+}
+
+setInterval(createHeart, 700);
+</script>
+
+</body>
+</html>
